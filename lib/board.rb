@@ -98,19 +98,5 @@ module Sudoku
 
       raise Errors::Board::CellNotFoundError
     end
-
-    def mark(row, col, val)
-      raise Errors::Board::LocationError unless (0..8).include?(row)
-      raise Errors::Board::LocationError unless (0..8).include?(col)
-
-      self[row, col].mark(val)
-    end
-
-    def erase(row, col, val)
-      raise Errors::Board::LocationError unless (0..8).include?(row)
-      raise Errors::Board::LocationError unless (0..8).include?(col)
-
-      self[row, col].erase(val)
-    end
   end
 end
