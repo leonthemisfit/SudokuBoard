@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name = 'sudoku_board'
-  s.version = '0.0.3'
+  s.version = '0.0.4'
   s.license = 'MIT'
   s.summary = 'A library for representing and serializing Sudoku boards'
   s.author = 'leonthemisfit'
