@@ -8,11 +8,13 @@ require_relative 'constants'
 
 require_relative 'board_static'
 require_relative 'board_serial'
+require_relative 'board_validate'
 
 module Sudoku
   class Board
     extend BoardStatic
     include BoardSerial
+    include BoardValidate
 
     def initialize(serial = '', serializer = :yaml)
       @cells =

@@ -52,6 +52,12 @@ module Sudoku
           super
         end
       end
+
+      class InvalidGroupError < StandardError
+        def initialize(msg = 'Group type must be either row, column, or grid')
+          super
+        end
+      end
     end
   end
 end

@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name = 'sudoku_board'
-  s.version = '0.0.1'
+  s.version = '0.0.2'
   s.license = 'MIT'
   s.summary = 'A library for representing and serializing Sudoku boards'
   s.author = 'leonthemisfit'
@@ -14,6 +14,7 @@ Gem::Specification.new do |s|
     'lib/cell.rb',
     'lib/constants.rb',
     'lib/errors.rb',
-    'lib/sudoku_board.rb'
+    'lib/sudoku_board.rb',
+    'lib/board_validate.rb'
   ]
 end
