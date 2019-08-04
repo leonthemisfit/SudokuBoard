@@ -100,5 +100,13 @@ module Sudoku
 
       raise Errors::Board::CellNotFoundError
     end
+
+    def each_with_index(&block)
+      (0..8).each do |row|
+        (0..8).each do |col|
+          block.call(self[row, col], row, col)
+        end
+      end
+    end
   end
 end
