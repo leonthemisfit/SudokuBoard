@@ -51,10 +51,22 @@ module Sudoku
       @marks << val unless @marks.include?(val)
     end
 
+    def marks
+      @marks.clone
+    end
+
     def erase(val)
       raise Errors::Cell::ValueError unless (1..9).include?(val)
 
       @marks.delete(val)
+    end
+
+    def equal?(other)
+      @value == other.value && @marks == other.marks
+    end
+
+    def ==(other)
+      equal?(other)
     end
   end
 end
