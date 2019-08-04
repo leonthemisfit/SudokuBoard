@@ -31,5 +31,19 @@ module Sudoku
 
       rowv && colv && gridv
     end
+
+    def equal?(other)
+      raise Errors::Cell::OtherError unless other.is_a?(Board)
+
+      (0..8).all? do |row|
+        (0..8).all? do |col|
+          self[row, col] == other[row, col]
+        end
+      end
+    end
+
+    def ==(other)
+      equal?(other)
+    end
   end
 end
