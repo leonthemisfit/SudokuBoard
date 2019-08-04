@@ -20,6 +20,12 @@ module Sudoku
           super
         end
       end
+
+      class OtherError < TypeError
+        def initialize(msg = 'Right operand type not valid')
+          super
+        end
+      end
     end
 
     module Board

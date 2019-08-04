@@ -62,6 +62,8 @@ module Sudoku
     end
 
     def equal?(other)
+      raise Errors::Cell::OtherError unless other.is_a?(Cell)
+
       @value == other.value && @marks == other.marks
     end
 
