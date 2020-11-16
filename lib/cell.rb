@@ -20,7 +20,11 @@ module Sudoku
       end
     end
 
-    def value=(val, set_const = false)
+    def value=(val)
+      set_value(val, false)
+    end
+
+    def set_value(val, set_const = true)
       raise Errors::Cell::ConstantError if constant?
 
       if val == '*'
