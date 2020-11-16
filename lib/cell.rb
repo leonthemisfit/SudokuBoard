@@ -20,7 +20,7 @@ module Sudoku
       end
     end
 
-    def value=(val)
+    def value=(val, set_const = false)
       raise Errors::Cell::ConstantError if constant?
 
       if val == '*'
@@ -31,7 +31,7 @@ module Sudoku
 
         @value = val
         @marks = []
-        @constant = true
+        @constant = set_constant
       end
     end
 
