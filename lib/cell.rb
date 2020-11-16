@@ -31,7 +31,7 @@ module Sudoku
 
         @value = val
         @marks = []
-        @constant = set_constant
+        @constant = set_const
       end
     end
 
