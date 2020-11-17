@@ -108,5 +108,18 @@ module Sudoku
         end
       end
     end
+
+    def map_values(&block)
+      new_board = Board.new
+
+      (0..8).each do |x|
+        (0..8).each do |y|
+          # TODO: Add error checking this to make sure the returned value is valid
+          new_board[x, y] = block.call(self[x, y].value)
+        end
+      end
+
+      new_board
+    end
   end
 end
